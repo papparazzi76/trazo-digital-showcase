@@ -18,9 +18,9 @@
     --popover-foreground: 210 40% 98%;
 
     /* Brand colors */
-    --primary: 24 100% 55%;  /* Vibrant orange */
+    --primary: 235 100% 60%;  /* Indigo blue */
     --primary-foreground: 210 40% 98%;
-    --primary-glow: 24 100% 65%;
+    --primary-glow: 220 100% 70%;
 
     --secondary: 215 25% 16%;
     --secondary-foreground: 210 40% 98%;
@@ -28,7 +28,7 @@
     --muted: 215 25% 14%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 24 100% 55%;
+    --accent: 235 100% 60%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
@@ -37,17 +37,17 @@
     /* Border and input colors */
     --border: 215 25% 20%;
     --input: 215 25% 16%;
-    --ring: 24 100% 55%;
+    --ring: 235 100% 60%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(24 100% 55%), hsl(24 100% 65%));
+    --gradient-primary: linear-gradient(135deg, hsl(235 100% 60%), hsl(220 100% 70%));
     --gradient-dark: linear-gradient(135deg, hsl(215 25% 8%), hsl(215 25% 12%));
     --gradient-surface: linear-gradient(135deg, hsl(215 25% 12%), hsl(215 25% 16%));
     
     /* Shadows with brand color */
-    --shadow-glow: 0 0 40px hsl(24 100% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(235 100% 60% / 0.3);
     --shadow-card: 0 8px 32px hsl(215 25% 4% / 0.4);
     --shadow-elevated: 0 16px 48px hsl(215 25% 4% / 0.6);
 
@@ -140,7 +140,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at top, hsl(24 100% 55% / 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse at top, hsl(235 100% 60% / 0.1) 0%, transparent 70%);
   }
 
   /* Card with brand shadow */
@@ -163,7 +163,7 @@
   }
 
   .glow-primary:hover {
-    box-shadow: 0 0 60px hsl(24 100% 55% / 0.4);
+    box-shadow: 0 0 60px hsl(235 100% 60% / 0.4);
     transform: translateY(-2px);
   }
 
