@@ -21,7 +21,7 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Creamos experiencias
-            <span className="block bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+            <span className="block text-primary">
               digitales únicas
             </span>
           </h1>
