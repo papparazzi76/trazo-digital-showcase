@@ -53,7 +53,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Nuestros 
-            <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent"> Servicios</span>
+            <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent"> Servicios</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Soluciones digitales completas diseñadas para hacer crecer tu negocio en el mundo online
