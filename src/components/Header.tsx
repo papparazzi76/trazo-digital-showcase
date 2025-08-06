@@ -33,7 +33,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img src={logoTrazo} alt="Trazo.digital" className="h-10 w-10" />
-            <span className="text-2xl font-bold text-primary">
+            <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
               Trazo.digital
             </span>
           </div>
