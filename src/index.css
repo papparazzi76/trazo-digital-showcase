@@ -2,41 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Trazo.digital Design System - Professional dark theme with vibrant orange accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - Dark professional theme */
+    --background: 215 25% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card and surface colors */
+    --card: 215 25% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Brand colors */
+    --primary: 24 100% 55%;  /* Vibrant orange */
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 24 100% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 215 25% 16%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 25% 14%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 24 100% 55%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Border and input colors */
+    --border: 215 25% 20%;
+    --input: 215 25% 16%;
+    --ring: 24 100% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(24 100% 55%), hsl(24 100% 65%));
+    --gradient-dark: linear-gradient(135deg, hsl(215 25% 8%), hsl(215 25% 12%));
+    --gradient-surface: linear-gradient(135deg, hsl(215 25% 12%), hsl(215 25% 16%));
+    
+    /* Shadows with brand color */
+    --shadow-glow: 0 0 40px hsl(24 100% 55% / 0.3);
+    --shadow-card: 0 8px 32px hsl(215 25% 4% / 0.4);
+    --shadow-elevated: 0 16px 48px hsl(215 25% 4% / 0.6);
+
+    /* Animation tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +118,134 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero gradient background */
+  .hero-gradient {
+    background: var(--gradient-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top, hsl(24 100% 55% / 0.1) 0%, transparent 70%);
+  }
+
+  /* Card with brand shadow */
+  .card-elevated {
+    background: var(--gradient-surface);
+    box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--border));
+    transition: var(--transition-smooth);
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--shadow-elevated);
+    transform: translateY(-4px);
+  }
+
+  /* Glow effect for CTAs */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+    transition: var(--transition-smooth);
+  }
+
+  .glow-primary:hover {
+    box-shadow: 0 0 60px hsl(24 100% 55% / 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Parallax scroll effect */
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Service card hover effect */
+  .service-card {
+    background: var(--gradient-surface);
+    border: 1px solid hsl(var(--border));
+    transition: var(--transition-bounce);
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-elevated);
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  /* Portfolio item hover effect */
+  .portfolio-item {
+    overflow: hidden;
+    transition: var(--transition-smooth);
+  }
+
+  .portfolio-item:hover {
+    transform: scale(1.05);
+  }
+
+  .portfolio-item img {
+    transition: var(--transition-smooth);
+  }
+
+  .portfolio-item:hover img {
+    transform: scale(1.1);
+  }
+
+  /* WhatsApp floating button */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50;
+    background: #25D366;
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-bounce);
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Animated underline for navigation */
+  .nav-link {
+    position: relative;
+    transition: var(--transition-smooth);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: var(--transition-smooth);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Form input focus effects */
+  .form-input:focus {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
   }
 }
