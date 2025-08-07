@@ -1,7 +1,17 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useEffect, useState } from 'react';
+import heroDeveloperBg from '@/assets/hero-developer-bg.jpg';
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -10,7 +20,22 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="hero-gradient min-h-screen flex items-center justify-center relative">
+    <section id="inicio" className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Parallax Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{ 
+          transform: `translateY(${scrollY * 0.5}px)`,
+          backgroundImage: `url(${heroDeveloperBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.15
+        }}
+      />
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-background/80" />
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
