@@ -17,7 +17,7 @@ const ServicesPage = () => {
         <link rel="canonical" href={canonical} />
       </Helmet>
       <Header />
-      <main>
+      <main className="pt-20 md:pt-24 lg:pt-48">
         <h1 className="sr-only">Servicios de Diseño Web y Marketing</h1>
         <Services />
       </main>

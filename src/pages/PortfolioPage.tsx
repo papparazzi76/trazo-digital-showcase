@@ -17,7 +17,7 @@ const PortfolioPage = () => {
         <link rel="canonical" href={canonical} />
       </Helmet>
       <Header />
-      <main>
+      <main className="pt-20 md:pt-24 lg:pt-48">
         <h1 className="sr-only">Portafolio de Proyectos Web</h1>
         <Portfolio />
       </main>

@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="pt-20 md:pt-24 lg:pt-48">
         <Hero />
       </main>
       <Footer />

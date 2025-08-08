@@ -46,7 +46,7 @@ const Blog = () => {
         <script type="application/ld+json">{JSON.stringify(blogSchema)}</script>
       </Helmet>
       <Header />
-      <main>
+      <main className="pt-20 md:pt-24 lg:pt-48">
         <section className="py-20">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog de Trazo.digital</h1>
