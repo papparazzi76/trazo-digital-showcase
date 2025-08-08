@@ -28,7 +28,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="nav-link text-foreground hover:text-primary transition-colors">Inicio</Link>
-            <Link to="/servicios" className="nav-link text-foreground hover:text-primary transition-colors">Servicios</Link>
+            <Link to="/#servicios" className="nav-link text-foreground hover:text-primary transition-colors">Servicios</Link>
             <Link to="/portfolio" className="nav-link text-foreground hover:text-primary transition-colors">Portfolio</Link>
             <Link to="/blog" className="nav-link text-foreground hover:text-primary transition-colors">Blog</Link>
             <Link to="/contacto" className="nav-link text-foreground hover:text-primary transition-colors">Contacto</Link>
@@ -52,7 +52,7 @@ const Header = () => {
           <nav className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 mt-4">
               <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Inicio</Link>
-              <Link to="/servicios" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Servicios</Link>
+              <Link to="/#servicios" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Servicios</Link>
               <Link to="/portfolio" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Portfolio</Link>
               <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Blog</Link>
               <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Contacto</Link>
