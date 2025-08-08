@@ -1,9 +1,11 @@
+// src/pages/BlogPost.tsx
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { Helmet } from 'react-helmet-async';
 import { useLocation, useParams, Link } from 'react-router-dom';
 import { blogPosts } from '@/data/blogPosts';
+import SchemaOrg from '@/components/SchemaOrg';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -27,8 +29,6 @@ const BlogPost = () => {
   }
 
   const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
     headline: post.title,
     datePublished: post.date,
     dateModified: post.date,
@@ -42,8 +42,8 @@ const BlogPost = () => {
         <title>{`${post.title} | Trazo.digital`}</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
+      <SchemaOrg schema={articleSchema} type="Article" />
       <Header />
       <main className="pt-20 md:pt-24 lg:pt-48">
         <article className="container mx-auto px-4 py-20 max-w-3xl">
