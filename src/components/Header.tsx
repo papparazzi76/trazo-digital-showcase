@@ -65,7 +65,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-border">
+          <nav className="md:hidden mt-4 pb-4 border border-border bg-background rounded-xl shadow-lg animate-fade-in">
             <div className="flex flex-col space-y-4 mt-4">
               <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Inicio</Link>
               <button onClick={() => handleSectionClick('servicios')} className="text-left text-foreground hover:text-primary transition-colors">Servicios</button>
