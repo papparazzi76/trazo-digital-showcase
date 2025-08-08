@@ -1,62 +1,12 @@
-import { Globe, Share2, Search, Workflow, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { services } from '@/data/services';
 
 const Services = () => {
   const navigate = useNavigate();
 
-  const services = [
-    {
-      icon: Globe,
-      title: "Diseño y Desarrollo Web",
-      description: "Creamos páginas web modernas, responsivas y optimizadas para convertir visitantes en clientes.",
-      pricing: [
-        { type: "Web básica", price: "desde 250 €" },
-        { type: "Web profesional", price: "desde 650 €" },
-        { type: "Web con tienda online", price: "desde 990 €" }
-      ],
-      features: ["Diseño responsive", "Optimización SEO básica", "Panel de administración", "Hosting incluido"]
-    },
-    {
-      icon: Share2,
-      title: "Gestión Integral de RRSS",
-      description: "Gestionamos todas tus redes sociales con contenido estratégico que conecta con tu audiencia.",
-      pricing: [
-        { type: "Plan básico", price: "desde 195 €/mes" },
-        { type: "Plan avanzado", price: "desde 395 €/mes" },
-        { type: "Plan premium", price: "desde 595 €/mes" }
-      ],
-      features: ["Contenido personalizado", "Programación de posts", "Análisis de métricas", "Gestión de comunidad"]
-    },
-    {
-      icon: Search,
-      title: "Optimización SEO",
-      description: "Mejoramos el posicionamiento de tu web en Google para que te encuentren más clientes potenciales.",
-      pricing: [
-        { type: "Auditoría inicial", price: "gratuita" },
-        { type: "Plan SEO básico", price: "desde 290 €/mes" },
-        { type: "Plan SEO avanzado", price: "desde 590 €/mes" }
-      ],
-      features: ["Análisis de palabras clave", "Optimización técnica", "Link building", "Informes mensuales"]
-    },
-    {
-      icon: Workflow,
-      title: "Automatización de Procesos",
-      description: "Implementamos automatizaciones para ahorrar tiempo y reducir errores en tareas repetitivas.",
-      pricing: [
-        { type: "Setup inicial", price: "desde 350 €" },
-        { type: "Mantenimiento básico", price: "desde 150 €/mes" },
-        { type: "Plan avanzado", price: "desde 390 €/mes" }
-      ],
-      features: [
-        "Integración de herramientas (Zapier, Make)",
-        "Automatización de funnels y leads",
-        "Bots y flujos para RRSS y WhatsApp",
-        "Monitorización y reporting"
-      ]
-    }
-  ];
 
   return (
     <section id="servicios" className="py-20 bg-muted/30">
@@ -74,13 +24,17 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card key={index} className="service-card h-full">
+          {services.map((service) => (
+            <Card key={service.slug} className="service-card h-full">
               <CardHeader>
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl mb-3">{service.title}</CardTitle>
+                <CardTitle className="text-2xl mb-3">
+                  <Link to={`/servicios/${service.slug}`} className="hover:underline">
+                    {service.title}
+                  </Link>
+                </CardTitle>
                 <p className="text-muted-foreground">{service.description}</p>
               </CardHeader>
               <CardContent className="flex-1">
