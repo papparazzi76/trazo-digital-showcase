@@ -1,9 +1,11 @@
+// src/pages/ServiceDetail.tsx
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { Helmet } from 'react-helmet-async';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { services } from '@/data/services';
+import SchemaOrg from '@/components/SchemaOrg';
 
 const ServiceDetail = () => {
   const { slug } = useParams();
@@ -27,8 +29,6 @@ const ServiceDetail = () => {
   }
 
   const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
     name: service.title,
     description: service.description,
     areaServed: 'ES',
@@ -45,8 +45,8 @@ const ServiceDetail = () => {
         <title>{`${service.title} | Trazo.digital`}</title>
         <meta name="description" content={service.description} />
         <link rel="canonical" href={canonical} />
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>
+      <SchemaOrg schema={serviceSchema} type="Service" />
       <Header />
       <main className="pt-20 md:pt-24 lg:pt-48">
         <article className="container mx-auto px-4 py-20 max-w-5xl">
