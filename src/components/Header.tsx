@@ -1,23 +1,39 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsAtTop(window.scrollY < 10);
     };
-
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleSectionClick = (id: string) => {
+    if (location.pathname === '/') {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      navigate(`/#${id}`);
+    }
+    setIsMenuOpen(false);
+  };
+
+  const showHeader = isMenuOpen || isAtTop;
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent ${
+      showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+    }`}>
       <div className="container mx-auto px-4 py-2 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -28,7 +44,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="nav-link text-foreground hover:text-primary transition-colors">Inicio</Link>
-            <Link to="/#servicios" className="nav-link text-foreground hover:text-primary transition-colors">Servicios</Link>
+            <button onClick={() => handleSectionClick('servicios')} className="nav-link text-foreground hover:text-primary transition-colors">Servicios</button>
             <Link to="/portfolio" className="nav-link text-foreground hover:text-primary transition-colors">Portfolio</Link>
             <Link to="/blog" className="nav-link text-foreground hover:text-primary transition-colors">Blog</Link>
             <Link to="/contacto" className="nav-link text-foreground hover:text-primary transition-colors">Contacto</Link>
@@ -52,7 +68,7 @@ const Header = () => {
           <nav className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 mt-4">
               <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Inicio</Link>
-              <Link to="/#servicios" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Servicios</Link>
+              <button onClick={() => handleSectionClick('servicios')} className="text-left text-foreground hover:text-primary transition-colors">Servicios</button>
               <Link to="/portfolio" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Portfolio</Link>
               <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Blog</Link>
               <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Contacto</Link>
