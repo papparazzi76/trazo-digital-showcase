@@ -1,4 +1,4 @@
-import { Globe, Share2, Search, ArrowRight } from 'lucide-react';
+import { Globe, Share2, Search, Workflow, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -43,6 +43,22 @@ const Services = () => {
         { type: "Plan SEO avanzado", price: "desde 590 €/mes" }
       ],
       features: ["Análisis de palabras clave", "Optimización técnica", "Link building", "Informes mensuales"]
+    },
+    {
+      icon: Workflow,
+      title: "Automatización de Procesos",
+      description: "Implementamos automatizaciones para ahorrar tiempo y reducir errores en tareas repetitivas.",
+      pricing: [
+        { type: "Setup inicial", price: "desde 350 €" },
+        { type: "Mantenimiento básico", price: "desde 150 €/mes" },
+        { type: "Plan avanzado", price: "desde 390 €/mes" }
+      ],
+      features: [
+        "Integración de herramientas (Zapier, Make)",
+        "Automatización de funnels y leads",
+        "Bots y flujos para RRSS y WhatsApp",
+        "Monitorización y reporting"
+      ]
     }
   ];
 
