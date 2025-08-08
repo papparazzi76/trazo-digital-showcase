@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import PortfolioPage from "./pages/PortfolioPage";
+// Portfolio moved to home anchor
 import ContactPage from "./pages/ContactPage";
 import Blog from "./pages/Blog";
 
@@ -22,7 +22,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/servicios" element={<Navigate to="/#servicios" replace />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/portfolio" element={<Navigate to="/#portfolio" replace />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/blog" element={<Blog />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

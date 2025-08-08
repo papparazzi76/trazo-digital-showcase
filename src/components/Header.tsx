@@ -45,7 +45,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="nav-link text-foreground hover:text-primary transition-colors">Inicio</Link>
             <button onClick={() => handleSectionClick('servicios')} className="nav-link text-foreground hover:text-primary transition-colors">Servicios</button>
-            <Link to="/portfolio" className="nav-link text-foreground hover:text-primary transition-colors">Portfolio</Link>
+            <button onClick={() => handleSectionClick('portfolio')} className="nav-link text-foreground hover:text-primary transition-colors">Portfolio</button>
             <Link to="/blog" className="nav-link text-foreground hover:text-primary transition-colors">Blog</Link>
             <Link to="/contacto" className="nav-link text-foreground hover:text-primary transition-colors">Contacto</Link>
             <Link to="/contacto">
@@ -69,7 +69,7 @@ const Header = () => {
             <div className="flex flex-col space-y-4 mt-4">
               <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Inicio</Link>
               <button onClick={() => handleSectionClick('servicios')} className="text-left text-foreground hover:text-primary transition-colors">Servicios</button>
-              <Link to="/portfolio" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Portfolio</Link>
+              <button onClick={() => handleSectionClick('portfolio')} className="text-left text-foreground hover:text-primary transition-colors">Portfolio</button>
               <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Blog</Link>
               <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Contacto</Link>
               <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="w-full">

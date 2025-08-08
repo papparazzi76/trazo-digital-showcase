@@ -66,7 +66,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-6 border-border hover:border-primary"
-              onClick={() => navigate('/portfolio')}
+              onClick={() => navigate('/#portfolio')}
             >
               <Play className="mr-2 h-5 w-5" />
               Ver portfolio
