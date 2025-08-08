@@ -1,14 +1,7 @@
 import { Heart, Instagram, Facebook, Linkedin, Youtube } from 'lucide-react';
-import logoTrazo from '@/assets/logo-trazo.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -18,7 +11,9 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/lovable-uploads/4558bdc9-a56f-4c09-89fd-77050f7d5905.png" alt="Trazo.digital" className="h-40 w-40" />
+              <Link to="/" aria-label="Ir al inicio">
+                <img src="/lovable-uploads/4558bdc9-a56f-4c09-89fd-77050f7d5905.png" alt="Trazo.digital logo" className="h-40 w-40" />
+              </Link>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
               Creamos experiencias digitales únicas que impulsan el crecimiento de tu negocio. 
@@ -30,6 +25,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -38,6 +34,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
@@ -46,6 +43,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -54,6 +52,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                aria-label="YouTube"
               >
                 <Youtube className="h-5 w-5" />
               </a>
@@ -64,38 +63,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2">
-              <li>
-                <button 
-                  onClick={() => scrollToSection('inicio')}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Inicio
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('servicios')}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Servicios
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('portfolio')}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Portfolio
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('contacto')}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Contacto
-                </button>
-              </li>
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Inicio</Link></li>
+              <li><Link to="/servicios" className="text-muted-foreground hover:text-primary transition-colors">Servicios</Link></li>
+              <li><Link to="/portfolio" className="text-muted-foreground hover:text-primary transition-colors">Portfolio</Link></li>
+              <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link to="/contacto" className="text-muted-foreground hover:text-primary transition-colors">Contacto</Link></li>
             </ul>
           </div>
 

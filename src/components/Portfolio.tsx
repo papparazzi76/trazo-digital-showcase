@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ExternalLink, ArrowRight, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 
 // Import portfolio images
 import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
@@ -13,6 +14,7 @@ import portfolioRealEstate from '@/assets/portfolio-realestate.jpg';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
+  const navigate = useNavigate();
 
   const projects = [
     {
@@ -73,13 +75,6 @@ const Portfolio = () => {
 
   const displayedProjects = showAll ? projects : projects.filter(project => project.featured);
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contacto');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="portfolio" className="py-20">
       <div className="container mx-auto px-4">
@@ -96,7 +91,7 @@ const Portfolio = () => {
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {displayedProjects.map((project, index) => (
+          {displayedProjects.map((project) => (
             <Card key={project.id} className="portfolio-item group overflow-hidden">
               <div className="relative">
                 <img 
@@ -165,7 +160,7 @@ const Portfolio = () => {
           <Button 
             size="lg" 
             className="glow-primary"
-            onClick={scrollToContact}
+            onClick={() => navigate('/contacto')}
           >
             Empezar mi proyecto
             <ArrowRight className="ml-2 h-5 w-5" />

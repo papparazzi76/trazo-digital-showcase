@@ -4,12 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contacto');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -118,7 +113,7 @@ const Services = () => {
                 {/* CTA Button */}
                 <Button 
                   className="w-full group"
-                  onClick={scrollToContact}
+                  onClick={() => navigate('/contacto')}
                 >
                   Solicitar información
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -136,7 +131,7 @@ const Services = () => {
           <Button 
             size="lg" 
             className="glow-primary"
-            onClick={scrollToContact}
+            onClick={() => navigate('/contacto')}
           >
             Hablemos de tu proyecto
             <ArrowRight className="ml-2 h-5 w-5" />

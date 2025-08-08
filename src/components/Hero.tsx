@@ -1,23 +1,18 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import heroDeveloperBg from '@/assets/hero-developer-bg.jpg';
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="inicio" className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -62,7 +57,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="glow-primary text-lg px-8 py-6"
-              onClick={() => scrollToSection('contacto')}
+              onClick={() => navigate('/contacto')}
             >
               Comenzar mi proyecto
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -71,7 +66,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-6 border-border hover:border-primary"
-              onClick={() => scrollToSection('portfolio')}
+              onClick={() => navigate('/portfolio')}
             >
               <Play className="mr-2 h-5 w-5" />
               Ver portfolio
