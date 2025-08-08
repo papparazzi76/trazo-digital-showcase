@@ -34,11 +34,11 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent ${
       showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
     }`}>
-      <div className="container mx-auto px-4 py-1 md:py-2 lg:py-3">
+      <div className="container mx-auto px-4 py-2 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/lovable-uploads/4558bdc9-a56f-4c09-89fd-77050f7d5905.png" alt="Trazo.digital logo" className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16" />
+            <img src="/lovable-uploads/4558bdc9-a56f-4c09-89fd-77050f7d5905.png" alt="Trazo.digital logo" className="h-12 w-12 sm:h-14 sm:w-14 md:h-20 md:w-20 lg:h-40 lg:w-40" />
           </Link>
 
           {/* Desktop Navigation */}
