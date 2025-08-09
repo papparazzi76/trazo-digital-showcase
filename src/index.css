@@ -18,18 +18,18 @@
     --popover-foreground: 210 40% 98%;
 
     /* Brand colors */
-    --primary: 235 100% 60%;  /* Indigo blue */
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 220 100% 70%;
+    --primary: 4 74% 53%;  /* Brand red */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 4 84% 62%;
 
-    --secondary: 215 25% 16%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 4 74% 53%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 215 25% 14%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 235 100% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 4 84% 62%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
@@ -37,17 +37,17 @@
     /* Border and input colors */
     --border: 215 25% 20%;
     --input: 215 25% 16%;
-    --ring: 235 100% 60%;
+    --ring: 4 74% 53%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(235 100% 60%), hsl(220 100% 70%));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(0 0% 100%));
     --gradient-dark: linear-gradient(135deg, hsl(215 25% 8%), hsl(215 25% 12%));
     --gradient-surface: linear-gradient(135deg, hsl(215 25% 12%), hsl(215 25% 16%));
     
     /* Shadows with brand color */
-    --shadow-glow: 0 0 40px hsl(235 100% 60% / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
     --shadow-card: 0 8px 32px hsl(215 25% 4% / 0.4);
     --shadow-elevated: 0 16px 48px hsl(215 25% 4% / 0.6);
 
@@ -140,7 +140,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at top, hsl(235 100% 60% / 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse at top, hsl(var(--primary) / 0.1) 0%, transparent 70%);
   }
 
   /* Card with brand shadow */
@@ -163,7 +163,7 @@
   }
 
   .glow-primary:hover {
-    box-shadow: 0 0 60px hsl(235 100% 60% / 0.4);
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.4);
     transform: translateY(-2px);
   }
 
@@ -247,5 +247,13 @@
   .form-input:focus {
     border-color: hsl(var(--primary));
     box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+  }
+
+  /* Brand gradient text helper */
+  .text-brand-gradient {
+    background-image: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(0 0% 100%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }

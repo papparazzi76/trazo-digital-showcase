@@ -50,8 +50,8 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">Hablemos de tu</span>
-            <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent"> proyecto</span>
+            <span className="text-brand-gradient">Hablemos de tu</span>
+            <span className="text-brand-gradient"> proyecto</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             ¿Listo para llevar tu presencia digital al siguiente nivel? Contáctanos y hagamos realidad tus ideas.
