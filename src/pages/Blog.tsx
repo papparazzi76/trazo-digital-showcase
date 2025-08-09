@@ -37,7 +37,7 @@ const Blog = () => {
                 <article key={post.slug} className="card-elevated p-6 rounded-2xl border border-border bg-card">
                   <header>
                     <h2 className="text-xl font-semibold mb-2">
-                      <Link to={`/blog/${post.slug}`} className="hover:text-primary transition-colors story-link">{post.title}</Link>
+                      <Link to={`/blog/${post.slug}`} className="text-primary hover:opacity-80 transition-colors story-link">{post.title}</Link>
                     </h2>
                     <time className="text-sm text-muted-foreground">{new Date(post.date).toLocaleDateString('es-ES')}</time>
                   </header>

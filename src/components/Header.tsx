@@ -43,11 +43,11 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="nav-link text-foreground hover:text-primary transition-colors">Inicio</Link>
-            <button onClick={() => handleSectionClick('servicios')} className="nav-link text-foreground hover:text-primary transition-colors">Servicios</button>
-            <button onClick={() => handleSectionClick('portfolio')} className="nav-link text-foreground hover:text-primary transition-colors">Portfolio</button>
-            <Link to="/blog" className="nav-link text-foreground hover:text-primary transition-colors">Blog</Link>
-            <Link to="/contacto" className="nav-link text-foreground hover:text-primary transition-colors">Contacto</Link>
+            <Link to="/" className="nav-link text-primary hover:opacity-80 transition-colors">Inicio</Link>
+            <button onClick={() => handleSectionClick('servicios')} className="nav-link text-primary hover:opacity-80 transition-colors">Servicios</button>
+            <button onClick={() => handleSectionClick('portfolio')} className="nav-link text-primary hover:opacity-80 transition-colors">Portfolio</button>
+            <Link to="/blog" className="nav-link text-primary hover:opacity-80 transition-colors">Blog</Link>
+            <Link to="/contacto" className="nav-link text-primary hover:opacity-80 transition-colors">Contacto</Link>
             <Link to="/contacto">
               <Button className="glow-primary">Comenzar Proyecto</Button>
             </Link>
@@ -67,11 +67,11 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border border-border bg-background rounded-xl shadow-lg animate-fade-in">
             <div className="flex flex-col space-y-4 mt-4">
-              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Inicio</Link>
-              <button onClick={() => handleSectionClick('servicios')} className="text-left text-foreground hover:text-primary transition-colors">Servicios</button>
-              <button onClick={() => handleSectionClick('portfolio')} className="text-left text-foreground hover:text-primary transition-colors">Portfolio</button>
-              <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Blog</Link>
-              <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="text-left text-foreground hover:text-primary transition-colors">Contacto</Link>
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-left text-primary hover:opacity-80 transition-colors">Inicio</Link>
+              <button onClick={() => handleSectionClick('servicios')} className="text-left text-primary hover:opacity-80 transition-colors">Servicios</button>
+              <button onClick={() => handleSectionClick('portfolio')} className="text-left text-primary hover:opacity-80 transition-colors">Portfolio</button>
+              <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="text-left text-primary hover:opacity-80 transition-colors">Blog</Link>
+              <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="text-left text-primary hover:opacity-80 transition-colors">Contacto</Link>
               <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="w-full">
                 <Button className="w-full glow-primary mt-4">Comenzar Proyecto</Button>
               </Link>

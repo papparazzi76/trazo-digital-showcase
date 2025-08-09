@@ -166,7 +166,7 @@ const Contact = () => {
                     <h4 className="font-semibold">Email</h4>
                     <a 
                       href="mailto:hola@trazo.digital" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-primary hover:opacity-80 transition-colors"
                     >
                       hola@trazo.digital
                     </a>
@@ -181,7 +181,7 @@ const Contact = () => {
                     <h4 className="font-semibold">Teléfono</h4>
                     <a 
                       href="tel:+34123456789" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-primary hover:opacity-80 transition-colors"
                     >
                       +34 123 456 789
                     </a>
@@ -196,7 +196,7 @@ const Contact = () => {
                     <h4 className="font-semibold">WhatsApp</h4>
                     <button 
                       onClick={openWhatsApp}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-primary hover:opacity-80 transition-colors"
                     >
                       Enviar mensaje
                     </button>

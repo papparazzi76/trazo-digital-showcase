@@ -122,7 +122,7 @@ const Portfolio = () => {
                   <h3 className="text-xl font-semibold">{project.title}</h3>
                   <button 
                     onClick={() => window.open(project.link, '_blank')}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-primary hover:opacity-80 transition-colors"
                   >
                     <ExternalLink className="h-5 w-5" />
                   </button>

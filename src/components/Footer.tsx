@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <Link to="/" aria-label="Ir al inicio">
-                <img src="/lovable-uploads/4558bdc9-a56f-4c09-89fd-77050f7d5905.png" alt="Trazo.digital logo" className="h-40 w-40" />
+                <img src="/lovable-uploads/082dcc8a-cda3-4518-9d61-959bcab54707.png" alt="Trazo.digital logo" className="h-40 w-40" />
               </Link>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
@@ -63,11 +63,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Inicio</Link></li>
-              <li><Link to="/#servicios" className="text-muted-foreground hover:text-primary transition-colors">Servicios</Link></li>
-              <li><Link to="/#portfolio" className="text-muted-foreground hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link to="/contacto" className="text-muted-foreground hover:text-primary transition-colors">Contacto</Link></li>
+              <li><Link to="/" className="text-primary hover:opacity-80 transition-colors">Inicio</Link></li>
+              <li><Link to="/#servicios" className="text-primary hover:opacity-80 transition-colors">Servicios</Link></li>
+              <li><Link to="/#portfolio" className="text-primary hover:opacity-80 transition-colors">Portfolio</Link></li>
+              <li><Link to="/blog" className="text-primary hover:opacity-80 transition-colors">Blog</Link></li>
+              <li><Link to="/contacto" className="text-primary hover:opacity-80 transition-colors">Contacto</Link></li>
             </ul>
           </div>
 
