@@ -8,7 +8,6 @@ const Header = () => {
   const [isAtTop, setIsAtTop] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
-  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +31,7 @@ const Header = () => {
   const showHeader = isMenuOpen || isAtTop;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isHome ? 'bg-transparent' : 'bg-background/80 backdrop-blur'} ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent ${
       showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
     }`}>
       <div className="container mx-auto px-4 py-2 md:py-4">
