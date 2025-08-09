@@ -140,7 +140,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at top, transparent 0%, transparent 25%, hsl(var(--primary) / 0.08) 55%, transparent 85%);
+    background: radial-gradient(ellipse at top, hsl(var(--primary) / 0.1) 0%, transparent 70%);
   }
 
   /* Card with brand shadow */
