@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-type SchemaType = 'Article' | 'Service' | 'Blog';
+type SchemaType = 'Article' | 'Service' | 'Blog' | 'PrivacyPolicy' | 'WebPage';
 
 interface SchemaOrgProps {
   schema: object;

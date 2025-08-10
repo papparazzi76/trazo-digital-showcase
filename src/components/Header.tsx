@@ -50,6 +50,7 @@ const Header = () => {
             <button onClick={() => handleSectionClick('servicios')} className="nav-link text-primary hover:opacity-80 transition-colors">Servicios</button>
             <button onClick={() => handleSectionClick('portfolio')} className="nav-link text-primary hover:opacity-80 transition-colors">Portfolio</button>
             <Link to="/blog" className="nav-link text-primary hover:opacity-80 transition-colors">Blog</Link>
+            <Link to="/politica-de-privacidad" className="nav-link text-primary hover:opacity-80 transition-colors">Privacidad</Link>
             <Link to="/contacto" className="nav-link text-primary hover:opacity-80 transition-colors">Contacto</Link>
             <Link to="/contacto">
               <Button className="glow-primary">Comenzar Proyecto</Button>
@@ -74,6 +75,7 @@ const Header = () => {
               <button onClick={() => handleSectionClick('servicios')} className="text-left text-primary hover:opacity-80 transition-colors">Servicios</button>
               <button onClick={() => handleSectionClick('portfolio')} className="text-left text-primary hover:opacity-80 transition-colors">Portfolio</button>
               <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="text-left text-primary hover:opacity-80 transition-colors">Blog</Link>
+              <Link to="/politica-de-privacidad" onClick={() => setIsMenuOpen(false)} className="text-left text-primary hover:opacity-80 transition-colors">Privacidad</Link>
               <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="text-left text-primary hover:opacity-80 transition-colors">Contacto</Link>
               <Link to="/contacto" onClick={() => setIsMenuOpen(false)} className="w-full">
                 <Button className="w-full glow-primary mt-4">Comenzar Proyecto</Button>

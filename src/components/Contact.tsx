@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-
+import { supabase } from '@/integrations/supabase/client';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -28,15 +28,32 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const { data, error } = await supabase.functions.invoke('send-confirmation', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+      });
+
+      if (error) throw error;
+
       toast({
         title: "¡Mensaje enviado!",
-        description: "Nos pondremos en contacto contigo muy pronto.",
+        description: "Te hemos enviado una confirmación por email. Nos pondremos en contacto contigo muy pronto.",
       });
       setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (err: any) {
+      toast({
+        title: "No se pudo enviar el mensaje",
+        description: err.message ?? 'Inténtalo de nuevo en unos minutos.',
+        variant: 'destructive'
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const openWhatsApp = () => {
