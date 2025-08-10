@@ -5,13 +5,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 
 // Import portfolio images
-import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
+import portfolioAsesoria from '@/assets/portfolio-ecommerce.jpg';
 import portfolioCorporate from '@/assets/portfolio-curso.png';
 import portfolioRestaurant from '@/assets/portfolio-restaurante-tulsi.png';
 import portfolioAgency from '@/assets/porfolio-imprenta.png';
 import portfolioSalud from '@/assets/portfolio-cuidado-personal.png';
 import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
-import portfolioArtists from '@/assets/portfolio-real-estate.png';
+import portfolioArtists from '@/assets/portfolio-mago-tono.png';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
@@ -49,15 +49,15 @@ const Portfolio = () => {
       id: 4,
       title: "Imprenta y Artes Gráficas",
       description: "Web de presentación de servicios y productos",
-      image: portfolioCorporate,
+      image: portfolioAgency,
       category: "Portfolio",
       link: "https://graficasceleste.com",
       featured: false
     },
     {
       id: 5,
-      title: "Clínica Médica",
-      description: "Sistema de citas online y gestión de pacientes",
+      title: "Magia y Humor",
+      description: "Web portfolio y contrataciones del Mago Toño",
       image: portfolioArtists,
       category: "Espectáculos",
       link: "https://ejemplo-clinica.com",
@@ -65,10 +65,10 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: "Agente Inmobiliaria Premium",
-      description: "Portal de propiedades con búsqueda avanzada",
-      image: portfolioRealEstate,
-      category: "Inmobiliaria",
+      title: "Asesoría para Restaurantes",
+      description: "Portal de servicios para asesoría a negocios de restauración"",
+      image: portfolioAsesoria,
+      category: "Restauración",
       link: "https://slategray-hornet-109268.hostingersite.com/",
       featured: false
     }
