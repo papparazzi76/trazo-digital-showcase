@@ -5,13 +5,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 
 // Import portfolio images
-import portfolioAsesoria from '@/assets/portfolio-ecommerce.jpg';
+import portfolioAsesoria from '@/portfolio-chef-mariscal.png';
 import portfolioCorporate from '@/assets/portfolio-curso.png';
 import portfolioRestaurant from '@/assets/portfolio-restaurante-tulsi.png';
 import portfolioAgency from '@/assets/porfolio-imprenta.png';
 import portfolioSalud from '@/assets/portfolio-cuidado-personal.png';
 import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
-import portfolioArtists from '@/assets/portfolio-agency.jpg';
+import portfolioArtists from '@/assets/portfolio-mago-tono.png';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
