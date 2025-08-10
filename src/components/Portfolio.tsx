@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
 import portfolioCorporate from '@/assets/portfolio-corporate.jpg';
 import portfolioRestaurant from '@/assets/portfolio-restaurante-tulsi.png';
-import portfolioAgency from '@/assets/portfolio-agency.jpg';
+import portfolioAgency from '@/assets/porfolio-imprenta.png';
 import portfolioMedical from '@/assets/portfolio-cuidado-personal.png';
 import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
 
