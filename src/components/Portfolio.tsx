@@ -12,6 +12,9 @@ import portfolioAgency from '@/assets/porfolio-imprenta.png';
 import portfolioSalud from '@/assets/portfolio-cuidado-personal.png';
 import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
 import portfolioArtists from '@/assets/portfolio-mago-tono.png';
+import portfolioTravel from '@/assets/portofolio-escocia.png';
+import portfolioValladolid from '@/assets/portfolio-mago-tono.png';
+
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
@@ -71,7 +74,34 @@ const Portfolio = () => {
       category: "Restauración",
       link: "https://chefmariscal.es/",
       featured: false
-    }
+    },
+    {
+      id: 7,
+      title: "Asesora Inmobiliaria Premium",
+      description: "Web de presentación de servicios y cartera de propiedades",
+      image: portfolioRealEstate,
+      category: "Portfolio",
+      link: "https://slategray-hornet-109268.hostingersite.com/",
+      featured: false
+    },
+    {
+      id: 8,
+      title: "Guía de Viajes",
+      description: "Guía interactiva para rutas por Escocia",
+      image: portfolioTravel,
+      category: "Viajes",
+      link: "https://darkslateblue-ram-748010.hostingersite.com/",
+      featured: false
+    },
+    {
+      id: 9,
+      title: "Guía Turística de Valladolid",
+      description: "Portal para planificar estancias turísticas en Valladolid",
+      image: portfolioValladolid,
+      category: "Viajes",
+      link: "https://lawngreen-oyster-630017.hostingersite.com/",
+      featured: false
+    
   ];
 
   const displayedProjects = showAll ? projects : projects.filter(project => project.featured);
