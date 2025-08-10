@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { smoothScrollToElement } from '@/lib/smoothScroll';
 
 const Index = () => {
   const location = useLocation();
@@ -14,7 +15,9 @@ const Index = () => {
     if (location.hash) {
       const id = location.hash.replace('#', '');
       const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (el) {
+        smoothScrollToElement(el, { duration: 1100 });
+      }
     }
   }, [location.hash]);
 

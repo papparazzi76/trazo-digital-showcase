@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { smoothScrollToElement } from '@/lib/smoothScroll';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,9 @@ const Header = () => {
   const handleSectionClick = (id: string) => {
     if (location.pathname === '/') {
       const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (el) {
+        smoothScrollToElement(el, { duration: 1100 });
+      }
     } else {
       navigate(`/#${id}`);
     }
