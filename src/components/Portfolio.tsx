@@ -9,8 +9,9 @@ import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
 import portfolioCorporate from '@/assets/portfolio-curso.png';
 import portfolioRestaurant from '@/assets/portfolio-restaurante-tulsi.png';
 import portfolioAgency from '@/assets/porfolio-imprenta.png';
-import portfolioMedical from '@/assets/portfolio-cuidado-personal.png';
+import portfolioSalud from '@/assets/portfolio-cuidado-personal.png';
 import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
+import portfolioArtists from '@/assets/portfolio-real-estate.png';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
@@ -21,7 +22,7 @@ const Portfolio = () => {
       id: 1,
       title: "Blog de Cuidado Personal",
       description: "Sesiones de Pilates, Servicio de masajes y Blog",
-      image: portfolioMedical,
+      image: portfolioSalud,
       category: "Salud",
       link: "https://soloporhoy.es",
       featured: true
@@ -57,8 +58,8 @@ const Portfolio = () => {
       id: 5,
       title: "Clínica Médica",
       description: "Sistema de citas online y gestión de pacientes",
-      image: portfolioMedical,
-      category: "Salud",
+      image: portfolioArtists,
+      category: "Espectáculos",
       link: "https://ejemplo-clinica.com",
       featured: false
     },
