@@ -23,25 +23,25 @@ const Portfolio = () => {
       description: "E-commerce completo con pasarela de pago y gestión de inventario",
       image: portfolioEcommerce,
       category: "E-commerce",
-      link: "https://ejemplo-tienda.com",
+      link: "https://soloporhoy.es",
       featured: true
     },
     {
       id: 2,
-      title: "Web Corporativa Tech",
-      description: "Sitio web profesional para empresa de tecnología",
+      title: "Web Educativa de IA",
+      description: "Sitio web con curso gratuito de Inteligencia Artificial",
       image: portfolioCorporate,
       category: "Corporativo",
-      link: "https://ejemplo-corp.com",
+      link: "https://iadomus.es",
       featured: true
     },
     {
       id: 3,
-      title: "Restaurante Gourmet",
+      title: "Tulsi Indian Restaurant",
       description: "Web con reservas online y carta digital interactiva",
       image: portfolioRestaurant,
       category: "Restauración",
-      link: "https://ejemplo-restaurante.com",
+      link: "https://tulsiindianvalladolid.com",
       featured: true
     },
     {
