@@ -13,7 +13,7 @@ import portfolioSalud from '@/assets/portfolio-cuidado-personal.png';
 import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
 import portfolioArtists from '@/assets/portfolio-mago-tono.png';
 import portfolioTravel from '@/assets/portofolio-escocia.png';
-import portfolioValladolid from '@/assets/portfolio-mago-tono.png';
+import portfolioValladolid from '@/assets/porfolio-valladolid.png';
 
 
 const Portfolio = () => {
