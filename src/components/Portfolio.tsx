@@ -11,7 +11,7 @@ import portfolioRestaurant from '@/assets/portfolio-restaurante-tulsi.png';
 import portfolioAgency from '@/assets/porfolio-imprenta.png';
 import portfolioSalud from '@/assets/portfolio-cuidado-personal.png';
 import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
-import portfolioArtists from '@/assets/portfolio-mago-tono.png';
+import portfolioArtists from '@/assets/portfolio-agency.jpg';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
@@ -66,7 +66,7 @@ const Portfolio = () => {
     {
       id: 6,
       title: "Asesoría para Restaurantes",
-      description: "Portal de servicios para asesoría a negocios de restauración"",
+      description: "Portal de servicios para asesoría a negocios de restauración",
       image: portfolioAsesoria,
       category: "Restauración",
       link: "https://slategray-hornet-109268.hostingersite.com/",
