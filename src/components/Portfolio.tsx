@@ -5,8 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
 
 // Import portfolio images
-import portfolioAsesoria from '@/assets/';
-import portfolioCorporate from '@/assets/portfolio-chef-mariscal.png';
+import portfolioAsesoria from '@/assets/portfolio-chef-mariscal.png';
+import portfolioCorporate from '@/assets/portfolio-curso.png';
 import portfolioRestaurant from '@/assets/portfolio-restaurante-tulsi.png';
 import portfolioAgency from '@/assets/porfolio-imprenta.png';
 import portfolioSalud from '@/assets/portfolio-cuidado-personal.png';
