@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 // Import portfolio images
 import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
-import portfolioCorporate from '@/assets/portfolio-corporate.jpg';
+import portfolioCorporate from '@/assets/portfolio-curso.png';
 import portfolioRestaurant from '@/assets/portfolio-restaurante-tulsi.png';
 import portfolioAgency from '@/assets/porfolio-imprenta.png';
 import portfolioMedical from '@/assets/portfolio-cuidado-personal.png';
