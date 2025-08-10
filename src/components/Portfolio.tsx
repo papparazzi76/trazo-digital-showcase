@@ -101,7 +101,7 @@ const Portfolio = () => {
       category: "Viajes",
       link: "https://lawngreen-oyster-630017.hostingersite.com/",
       featured: false
-    
+    }
   ];
 
   const displayedProjects = showAll ? projects : projects.filter(project => project.featured);
