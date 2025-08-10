@@ -7,10 +7,10 @@ import { useNavigate } from 'react-router-dom';
 // Import portfolio images
 import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
 import portfolioCorporate from '@/assets/portfolio-corporate.jpg';
-import portfolioRestaurant from '@/assets/portfolio-restaurant.jpg';
+import portfolioRestaurant from '@/assets/portfolio-restaurante-tulsi.png';
 import portfolioAgency from '@/assets/portfolio-agency.jpg';
-import portfolioMedical from '@/assets/portfolio-medical.jpg';
-import portfolioRealEstate from '@/assets/portfolio-realestate.jpg';
+import portfolioMedical from '@/assets/portfolio-cuidado-personal.png';
+import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
