@@ -19,10 +19,10 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Tienda Online Moda",
-      description: "E-commerce completo con pasarela de pago y gestión de inventario",
-      image: portfolioEcommerce,
-      category: "E-commerce",
+      title: "Blog de Cuidado Personal",
+      description: "Sesiones de Pilates, Servicio de masajes y Blog",
+      image: portfolioMedical,
+      category: "Salud",
       link: "https://soloporhoy.es",
       featured: true
     },
@@ -31,7 +31,7 @@ const Portfolio = () => {
       title: "Web Educativa de IA",
       description: "Sitio web con curso gratuito de Inteligencia Artificial",
       image: portfolioCorporate,
-      category: "Corporativo",
+      category: "Educativo",
       link: "https://iadomus.es",
       featured: true
     },
@@ -46,11 +46,11 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "Agencia Creativa",
-      description: "Portfolio dinámico con animaciones y efectos visuales",
-      image: portfolioAgency,
+      title: "Imprenta y Artes Gráficas",
+      description: "Web de presentación de servicios y productos",
+      image: portfolioCorporate,
       category: "Portfolio",
-      link: "https://ejemplo-agencia.com",
+      link: "https://graficasceleste.com",
       featured: false
     },
     {
@@ -64,11 +64,11 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: "Inmobiliaria Premium",
+      title: "Agente Inmobiliaria Premium",
       description: "Portal de propiedades con búsqueda avanzada",
       image: portfolioRealEstate,
       category: "Inmobiliaria",
-      link: "https://ejemplo-inmobiliaria.com",
+      link: "https://slategray-hornet-109268.hostingersite.com/",
       featured: false
     }
   ];
