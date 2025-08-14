@@ -29,16 +29,28 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-confirmation', {
-        body: {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        },
-      });
+      // Enviar confirmación al usuario y notificación al admin en paralelo
+      const [confirmationResult, adminNotificationResult] = await Promise.all([
+        supabase.functions.invoke('send-confirmation', {
+          body: {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+          },
+        }),
+        supabase.functions.invoke('send-admin-notification', {
+          body: {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+          },
+        })
+      ]);
 
-      if (error) throw error;
+      if (confirmationResult.error) throw confirmationResult.error;
+      if (adminNotificationResult.error) throw adminNotificationResult.error;
 
       toast({
         title: "¡Mensaje enviado!",
