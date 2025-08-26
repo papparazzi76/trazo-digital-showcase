@@ -14,6 +14,7 @@ import portfolioRealEstate from '@/assets/portfolio-real-estate.png';
 import portfolioArtists from '@/assets/portfolio-mago-tono.png';
 import portfolioTravel from '@/assets/portofolio-escocia.png';
 import portfolioValladolid from '@/assets/porfolio-valladolid.png';
+import portfolioLaOficina from '@/assets/portfolio-la-oficina.png';
 
 
 const Portfolio = () => {
@@ -100,6 +101,15 @@ const Portfolio = () => {
       image: portfolioValladolid,
       category: "Viajes",
       link: "https://lawngreen-oyster-630017.hostingersite.com/",
+      featured: false
+    },
+    {
+      id: 10,
+      title: "Café-Bar La Oficina",
+      description: "Web de bar cafetería con carta digital y ambiente acogedor en Valladolid",
+      image: portfolioLaOficina,
+      category: "Restauración",
+      link: "https://lemonchiffon-bear-243316.hostingersite.com/",
       featured: false
     }
   ];
