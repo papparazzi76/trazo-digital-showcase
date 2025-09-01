@@ -22,17 +22,11 @@ export const services: Service[] = [
       { type: 'Web profesional', price: 'desde 650 €' },
       { type: 'Web con tienda online', price: 'desde 990 €' },
     ],
-    features: [
-      'Diseño responsive', 
-      'Optimización SEO básica', 
-      'Panel de administración', 
-      'Hosting incluido',
-      'Fotografía y material audiovisual (opcional)',
-      'Redacción de contenidos con SEO optimizado'
-    ],
+    features: ['Diseño responsive', 'Optimización SEO básica', 'Panel de administración', 'Hosting incluido'],
     excludes: [
-      'Configuración y puesta en marcha de tienda online',
-      'Publicidad y gestión de campañas',
+      'Redacción de contenidos avanzada (disponible como extra)',
+      'Fotografía y material audiovisual (opcional)',
+      'Publicidad o gestión de campañas',
     ],
     icon: Globe,
   },
