@@ -85,13 +85,13 @@ export const services: Service[] = [
       },
       { 
         type: 'Plan SEO básico', 
-        price: 'desde 290 €/mes',
+        price: 'desde 290 €/año',
         features: ['Análisis de palabras clave', 'Optimización técnica básica', 'Informes mensuales'],
         excludes: ['Link building', 'Creación masiva de contenido', 'Garantía de posiciones exactas', 'Ads o SEM (servicio separado)']
       },
       { 
         type: 'Plan SEO avanzado', 
-        price: 'desde 590 €/mes',
+        price: 'desde 590 €/año',
         features: ['Análisis de palabras clave', 'Optimización técnica', 'Link building', 'Informes mensuales', 'Creación de contenido SEO'],
         excludes: ['Garantía de posiciones exactas', 'Ads o SEM (servicio separado)']
       },
