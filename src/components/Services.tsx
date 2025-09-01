@@ -66,11 +66,11 @@ const Services = () => {
                   </ul>
                 </div>
 
-                {/* Features */}
+                {/* Features - Mostrar las características del primer plan como ejemplo */}
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3 text-primary">Incluye:</h4>
+                  <h4 className="font-semibold mb-3 text-primary">Incluye (plan básico):</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.pricing[0]?.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                         <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
                         {feature}

@@ -49,7 +49,7 @@ const ServiceModal = ({ service, isOpen, onClose }: ServiceModalProps) => {
                     Lo que incluye:
                   </h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
+                    {option.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                         <div className="w-2 h-2 bg-primary/60 rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
@@ -65,7 +65,7 @@ const ServiceModal = ({ service, isOpen, onClose }: ServiceModalProps) => {
                     No incluye:
                   </h4>
                   <ul className="space-y-2">
-                    {service.excludes.map((exclude, excludeIndex) => (
+                    {option.excludes.map((exclude, excludeIndex) => (
                       <li key={excludeIndex} className="flex items-center text-sm text-muted-foreground/80">
                         <X className="w-3 h-3 mr-3 flex-shrink-0" />
                         {exclude}
