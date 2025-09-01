@@ -11,6 +11,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import ServiceDetail from "./pages/ServiceDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import PaymentSuccess from "./pages/PaymentSuccess";
+import PaymentCanceled from "./pages/PaymentCanceled";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -29,6 +31,8 @@ const App = () => (
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/servicios/:slug" element={<ServiceDetail />} />
             <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
+            <Route path="/pago-exitoso" element={<PaymentSuccess />} />
+            <Route path="/pago-cancelado" element={<PaymentCanceled />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
