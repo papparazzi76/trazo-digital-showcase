@@ -3,9 +3,24 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link, useNavigate } from 'react-router-dom';
 import { services } from '@/data/services';
+import ServiceModal from './ServiceModal';
+import { useState } from 'react';
+import type { Service } from '@/data/services';
 
 const Services = () => {
   const navigate = useNavigate();
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleContractClick = (service: Service) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedService(null);
+  };
 
 
   return (
@@ -64,14 +79,23 @@ const Services = () => {
                   </ul>
                 </div>
 
-                {/* CTA Button */}
-                <Button 
-                  className="w-full group"
-                  onClick={() => navigate('/contacto')}
-                >
-                  Solicitar información
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+                {/* CTA Buttons */}
+                <div className="space-y-3">
+                  <Button 
+                    className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold"
+                    onClick={() => handleContractClick(service)}
+                  >
+                    Contratar
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    className="w-full group"
+                    onClick={() => navigate('/contacto')}
+                  >
+                    Solicitar información
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -91,6 +115,13 @@ const Services = () => {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
+
+        {/* Service Modal */}
+        <ServiceModal 
+          service={selectedService}
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+        />
       </div>
     </section>
   );
