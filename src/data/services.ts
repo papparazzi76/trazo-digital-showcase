@@ -52,7 +52,7 @@ export const services: Service[] = [
     pricing: [
       { 
         type: 'Plan básico', 
-        price: 'desde 195 €/año',
+        price: 'desde 250 €/año',
         features: ['Contenido personalizado', 'Programación de posts'],
         excludes: ['Análisis de métricas', 'Gestión de comunidad', 'Inversión en publicidad (Ads no incluidos)', 'Gestión de crisis 24/7', 'Atención al cliente']
       },
